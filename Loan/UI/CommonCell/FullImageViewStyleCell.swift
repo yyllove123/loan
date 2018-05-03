@@ -10,7 +10,8 @@ import UIKit
 
 class FullImageViewStyleCell: UITableViewCell, CellStyleProtocol {
 
-    func setData(data: Any?) {
+    var viewModel: CellStyleModel?
+    func setData(data: Any?, title: String?) {
         
     }
     

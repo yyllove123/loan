@@ -8,15 +8,36 @@
 
 import UIKit
 
+
+
 class TextFieldStyleCell: UITableViewCell, CellStyleProtocol {
     
-    func setData(data: Any?) {
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var textField: UITextField!
+    
+    var viewModel: CellStyleModel?
+
+    func setData(data: Any?, title: String?) {
+        textField.resignFirstResponder()
+        if let type = data as? UIKeyboardType {
+            textField.keyboardType = type
+        }
         
+        self.titleLabel.text = title
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
     }
 
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        NotificationCenter.default.addObserver(self, selector: #selector(resignNoti), name: NSNotification.Name(rawValue: CellStyleModel.keyboardResignNotification), object: nil)
+    }
+    
+    @objc func resignNoti() {
+        self.textField.resignFirstResponder()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

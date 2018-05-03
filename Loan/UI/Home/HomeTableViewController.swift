@@ -10,12 +10,14 @@ import UIKit
 
 class HomeTableViewController: UITableViewController {
     
-//    var list: [(String, String, UIViewController)] = [
-//        ("write_", "修改资料", CompleteInfoViewController()),
-//        ("collect_", "我的收藏", CollectionViewController()),
-//        ("user_", "账号绑定", ThirdPlatformBindController()),
-//        ("settings_", "设置", SettingViewController()),
-//        ]
+    lazy var list: [CellStyleModel] = [
+        CellStyleModel(style: .TextField, title: "选择手机号", data: UIKeyboardType.phonePad, controller: self, block:nil),
+        CellStyleModel(style: .TextField, title: "借款金额(元)", data: UIKeyboardType.numberPad, controller: self, block: nil),
+        CellStyleModel(style: .TextField, title: "借款天数(天)", data: UIKeyboardType.numberPad, controller: self, block: nil),
+        CellStyleModel(style: .Button, title: "马上申请", data: nil, controller: self, block: { (model, controller) in
+            print("afjeiwoafjeiwao;fjeaiw")
+        }),
+        ]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +27,8 @@ class HomeTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
+        CellStyleModel.registerCells(tableView: self.tableView)
     }
 
     override func didReceiveMemoryWarning() {
@@ -36,25 +40,33 @@ class HomeTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return list.count
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        let model = self.list[indexPath.row]
+        return model.tableView(tableView, heightForRowAt: indexPath)
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
-        return cell
+        
+        let model = self.list[indexPath.row]
+        return model.tableView(tableView, cellForRowAt: indexPath, data: model.data)
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        let model = self.list[indexPath.row]
+        model.tableView(tableView, didSelectRowAt: indexPath)
+    }
+    
+    override func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: CellStyleModel.keyboardResignNotification), object: nil)
     }
 
     /*

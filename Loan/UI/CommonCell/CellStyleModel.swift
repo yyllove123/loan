@@ -12,10 +12,25 @@ import UIKit
 struct CellStyleModel {
     
     var style: CellStyle
-    var data: Any
-    var block: ((Any, UIViewController) -> Void)?
+    var title: String?
+    
+    var data: Any?
+    var block: ((CellStyleModel, UIViewController) -> Void)?
+    var controller: UIViewController
+    
+    static let keyboardResignNotification = "kKeyboardResignNotification"
+    
+    
+    init(style: CellStyle, title: String?, data: Any?, controller: UIViewController, block: ((CellStyleModel, UIViewController) -> Void)?) {
+        self.style = style
+        self.title = title
+        self.data = data
+        self.controller = controller
+        self.block = block
+    }
     
     static func registerCells(tableView: UITableView) {
+        
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "tableViewCell")
         
         tableView.register(UINib(nibName: CellStyle.Button.identifier(), bundle: nil), forCellReuseIdentifier: CellStyle.Button.identifier())
@@ -25,16 +40,24 @@ struct CellStyleModel {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath, data: Any?) -> UITableViewCell{
-        if let cell = tableView.dequeueReusableCell(withIdentifier: self.style.identifier(), for: indexPath) as? CellStyleProtocol {
-            cell.setData(data: data)
-            return cell as! UITableViewCell
+        if var cell = tableView.dequeueReusableCell(withIdentifier: self.style.identifier(), for: indexPath) as? CellStyleProtocol {
+            cell.viewModel = self
+            cell.setData(data: data, title: title)
+            
+            let cellView = cell as! UITableViewCell
+            cellView.selectionStyle = .none
+            return cellView
         }
         return tableView.dequeueReusableCell(withIdentifier: "tableViewCell", for: indexPath)
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath, controller: UIViewController)
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
-        block?(data, controller)
+        block?(self, controller)
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return CGFloat(style.height())
     }
 }
 
@@ -56,8 +79,22 @@ enum CellStyle {
             return "TextFieldStyleCell"
         }
     }
+    
+    func height() -> Float {
+        switch self {
+        case .Button:
+            return 66.5
+        case .FullImageView:
+            return 66.5
+        case .PasswordTextField:
+            return 66.5
+        case .TextField:
+            return 66.5
+        }
+    }
 }
 
 protocol CellStyleProtocol {
-    func setData(data: Any?)
+    var viewModel: CellStyleModel?  { get set }
+    func setData(data: Any?, title: String?)
 }

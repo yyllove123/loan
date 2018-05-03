@@ -10,8 +10,11 @@ import UIKit
 
 class ButtonStyleCell: UITableViewCell, CellStyleProtocol {
     
-    func setData(data: Any?) {
-        
+    @IBOutlet weak var button: UIButton!
+    var viewModel: CellStyleModel?
+    
+    func setData(data: Any?, title: String?) {
+        self.button.setTitle(title, for: UIControlState.normal)
     }
 
     override func awakeFromNib() {
@@ -24,5 +27,7 @@ class ButtonStyleCell: UITableViewCell, CellStyleProtocol {
 
         // Configure the view for the selected state
     }
-    
+    @IBAction func buttonPressed(_ sender: Any) {
+        self.viewModel!.block?(self.viewModel!, self.viewModel!.controller)
+    }
 }
