@@ -8,6 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		443C2151E3353DF7C45CAC3E /* libPods-Loan.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E89E882CA10FB502BA3EE55 /* libPods-Loan.a */; };
+		655178C2209AAF6B003B2CC5 /* ButtonStyleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655178C0209AAF6B003B2CC5 /* ButtonStyleCell.swift */; };
+		655178C3209AAF6B003B2CC5 /* ButtonStyleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 655178C1209AAF6B003B2CC5 /* ButtonStyleCell.xib */; };
+		655178C6209AAFF3003B2CC5 /* FullImageViewStyleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655178C4209AAFF3003B2CC5 /* FullImageViewStyleCell.swift */; };
+		655178C7209AAFF3003B2CC5 /* FullImageViewStyleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 655178C5209AAFF3003B2CC5 /* FullImageViewStyleCell.xib */; };
+		655178CA209AB010003B2CC5 /* TextFieldStyleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655178C8209AB010003B2CC5 /* TextFieldStyleCell.swift */; };
+		655178CB209AB010003B2CC5 /* TextFieldStyleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 655178C9209AB010003B2CC5 /* TextFieldStyleCell.xib */; };
+		655178CE209AB029003B2CC5 /* PasswordTextFieldStyleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655178CC209AB029003B2CC5 /* PasswordTextFieldStyleCell.swift */; };
+		655178CF209AB029003B2CC5 /* PasswordTextFieldStyleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 655178CD209AB029003B2CC5 /* PasswordTextFieldStyleCell.xib */; };
+		655178D1209AB117003B2CC5 /* CellStyleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655178D0209AB117003B2CC5 /* CellStyleModel.swift */; };
 		E091950B2099E9390083FBF8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E091950A2099E9390083FBF8 /* AppDelegate.swift */; };
 		E09195222099E93A0083FBF8 /* LoanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09195212099E93A0083FBF8 /* LoanTests.swift */; };
 		E091952D2099E93A0083FBF8 /* LoanUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E091952C2099E93A0083FBF8 /* LoanUITests.swift */; };
@@ -52,6 +61,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		655178C0209AAF6B003B2CC5 /* ButtonStyleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyleCell.swift; sourceTree = "<group>"; };
+		655178C1209AAF6B003B2CC5 /* ButtonStyleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ButtonStyleCell.xib; sourceTree = "<group>"; };
+		655178C4209AAFF3003B2CC5 /* FullImageViewStyleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullImageViewStyleCell.swift; sourceTree = "<group>"; };
+		655178C5209AAFF3003B2CC5 /* FullImageViewStyleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FullImageViewStyleCell.xib; sourceTree = "<group>"; };
+		655178C8209AB010003B2CC5 /* TextFieldStyleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldStyleCell.swift; sourceTree = "<group>"; };
+		655178C9209AB010003B2CC5 /* TextFieldStyleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextFieldStyleCell.xib; sourceTree = "<group>"; };
+		655178CC209AB029003B2CC5 /* PasswordTextFieldStyleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordTextFieldStyleCell.swift; sourceTree = "<group>"; };
+		655178CD209AB029003B2CC5 /* PasswordTextFieldStyleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PasswordTextFieldStyleCell.xib; sourceTree = "<group>"; };
+		655178D0209AB117003B2CC5 /* CellStyleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellStyleModel.swift; sourceTree = "<group>"; };
 		6E89E882CA10FB502BA3EE55 /* libPods-Loan.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Loan.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		94B69AE99C4F4B8639CF596D /* Pods-Loan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Loan.release.xcconfig"; path = "Pods/Target Support Files/Pods-Loan/Pods-Loan.release.xcconfig"; sourceTree = "<group>"; };
 		C90FCC599A4E148CF4ECB0D0 /* Pods-Loan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Loan.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Loan/Pods-Loan.debug.xcconfig"; sourceTree = "<group>"; };
@@ -114,6 +132,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		655178BF209AAF4B003B2CC5 /* CommonCell */ = {
+			isa = PBXGroup;
+			children = (
+				655178D0209AB117003B2CC5 /* CellStyleModel.swift */,
+				655178C0209AAF6B003B2CC5 /* ButtonStyleCell.swift */,
+				655178C1209AAF6B003B2CC5 /* ButtonStyleCell.xib */,
+				655178C4209AAFF3003B2CC5 /* FullImageViewStyleCell.swift */,
+				655178C5209AAFF3003B2CC5 /* FullImageViewStyleCell.xib */,
+				655178C8209AB010003B2CC5 /* TextFieldStyleCell.swift */,
+				655178C9209AB010003B2CC5 /* TextFieldStyleCell.xib */,
+				655178CC209AB029003B2CC5 /* PasswordTextFieldStyleCell.swift */,
+				655178CD209AB029003B2CC5 /* PasswordTextFieldStyleCell.xib */,
+			);
+			path = CommonCell;
+			sourceTree = "<group>";
+		};
 		77E792BA9896D7467197BCDE /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -247,7 +281,7 @@
 			isa = PBXGroup;
 			children = (
 				E09196092099F3C40083FBF8 /* RootTabBarController.swift */,
-				E09196172099F95F0083FBF8 /* Common */,
+				655178BF209AAF4B003B2CC5 /* CommonCell */,
 				E09195B32099F2F60083FBF8 /* My */,
 				E09195B52099F2F60083FBF8 /* Home */,
 				E09195B62099F2F60083FBF8 /* Login */,
@@ -289,13 +323,6 @@
 				E09196112099F4420083FBF8 /* LoginViewController.swift */,
 			);
 			path = Login;
-			sourceTree = "<group>";
-		};
-		E09196172099F95F0083FBF8 /* Common */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -405,8 +432,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				E09196072099F2F60083FBF8 /* Main.storyboard in Resources */,
+				655178CB209AB010003B2CC5 /* TextFieldStyleCell.xib in Resources */,
 				E09196062099F2F60083FBF8 /* LaunchScreen.storyboard in Resources */,
+				655178CF209AB029003B2CC5 /* PasswordTextFieldStyleCell.xib in Resources */,
+				655178C3209AAF6B003B2CC5 /* ButtonStyleCell.xib in Resources */,
 				E09196052099F2F60083FBF8 /* Assets.xcassets in Resources */,
+				655178C7209AAFF3003B2CC5 /* FullImageViewStyleCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,16 +488,21 @@
 				E091950B2099E9390083FBF8 /* AppDelegate.swift in Sources */,
 				E09195DE2099F2F60083FBF8 /* ResponseDataFilter.swift in Sources */,
 				E09195E72099F2F60083FBF8 /* UserModel.swift in Sources */,
+				655178CE209AB029003B2CC5 /* PasswordTextFieldStyleCell.swift in Sources */,
+				655178C6209AAFF3003B2CC5 /* FullImageViewStyleCell.swift in Sources */,
 				E09195ED2099F2F60083FBF8 /* UIView_ConvertToImage.swift in Sources */,
 				E09195EE2099F2F60083FBF8 /* ConvertString.swift in Sources */,
 				E091960A2099F3C40083FBF8 /* RootTabBarController.swift in Sources */,
 				E09195E62099F2F60083FBF8 /* UserData.swift in Sources */,
+				655178D1209AB117003B2CC5 /* CellStyleModel.swift in Sources */,
 				E09195E02099F2F60083FBF8 /* Request.swift in Sources */,
 				E09195EA2099F2F60083FBF8 /* ConvertData.swift in Sources */,
 				E091960C2099F4040083FBF8 /* HomeTableViewController.swift in Sources */,
 				E091960E2099F41A0083FBF8 /* StatuSearchTableViewController.swift in Sources */,
 				E09195EC2099F2F60083FBF8 /* ConvertFloat.swift in Sources */,
+				655178C2209AAF6B003B2CC5 /* ButtonStyleCell.swift in Sources */,
 				E09195EB2099F2F60083FBF8 /* NSDateExtend.swift in Sources */,
+				655178CA209AB010003B2CC5 /* TextFieldStyleCell.swift in Sources */,
 				E09195E92099F2F60083FBF8 /* Crypto.swift in Sources */,
 				E09196002099F2F60083FBF8 /* LoginManager.swift in Sources */,
 				E09196102099F4340083FBF8 /* MyCenterViewController.swift in Sources */,

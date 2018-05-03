@@ -10,12 +10,12 @@ import UIKit
 
 class HomeTableViewController: UITableViewController {
     
-    var list: [(String, String, UIViewController)] = [
-        ("write_", "修改资料", CompleteInfoViewController()),
-        ("collect_", "我的收藏", CollectionViewController()),
-        ("user_", "账号绑定", ThirdPlatformBindController()),
-        ("settings_", "设置", SettingViewController()),
-        ]
+//    var list: [(String, String, UIViewController)] = [
+//        ("write_", "修改资料", CompleteInfoViewController()),
+//        ("collect_", "我的收藏", CollectionViewController()),
+//        ("user_", "账号绑定", ThirdPlatformBindController()),
+//        ("settings_", "设置", SettingViewController()),
+//        ]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,7 +44,7 @@ class HomeTableViewController: UITableViewController {
         return 0
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
 
@@ -52,7 +52,10 @@ class HomeTableViewController: UITableViewController {
 
         return cell
     }
-    */
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+    }
 
     /*
     // Override to support conditional editing of the table view.
