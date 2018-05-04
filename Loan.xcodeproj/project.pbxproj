@@ -17,12 +17,12 @@
 		653652CC209C37ED00F94706 /* CellStyleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653652C2209C37ED00F94706 /* CellStyleModel.swift */; };
 		653652CD209C37ED00F94706 /* FullImageViewStyleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653652C3209C37ED00F94706 /* FullImageViewStyleCell.swift */; };
 		653652CE209C37ED00F94706 /* PasswordTextFieldStyleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 653652C4209C37ED00F94706 /* PasswordTextFieldStyleCell.xib */; };
+		653652D6209C39FC00F94706 /* ResponseDataFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653652D2209C39FC00F94706 /* ResponseDataFilter.swift */; };
+		653652D7209C39FC00F94706 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653652D3209C39FC00F94706 /* Request.swift */; };
+		653652D8209C39FC00F94706 /* RequestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653652D4209C39FC00F94706 /* RequestType.swift */; };
 		E091950B2099E9390083FBF8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E091950A2099E9390083FBF8 /* AppDelegate.swift */; };
 		E09195222099E93A0083FBF8 /* LoanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09195212099E93A0083FBF8 /* LoanTests.swift */; };
 		E091952D2099E93A0083FBF8 /* LoanUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E091952C2099E93A0083FBF8 /* LoanUITests.swift */; };
-		E09195DE2099F2F60083FBF8 /* ResponseDataFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09195752099F2F60083FBF8 /* ResponseDataFilter.swift */; };
-		E09195E02099F2F60083FBF8 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09195772099F2F60083FBF8 /* Request.swift */; };
-		E09195E42099F2F60083FBF8 /* RequestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E091957B2099F2F60083FBF8 /* RequestType.swift */; };
 		E09195E62099F2F60083FBF8 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E091957E2099F2F60083FBF8 /* UserData.swift */; };
 		E09195E72099F2F60083FBF8 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E091957F2099F2F60083FBF8 /* UserModel.swift */; };
 		E09195E82099F2F60083FBF8 /* UserGoalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09195802099F2F60083FBF8 /* UserGoalData.swift */; };
@@ -70,6 +70,9 @@
 		653652C2209C37ED00F94706 /* CellStyleModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellStyleModel.swift; sourceTree = "<group>"; };
 		653652C3209C37ED00F94706 /* FullImageViewStyleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullImageViewStyleCell.swift; sourceTree = "<group>"; };
 		653652C4209C37ED00F94706 /* PasswordTextFieldStyleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PasswordTextFieldStyleCell.xib; sourceTree = "<group>"; };
+		653652D2209C39FC00F94706 /* ResponseDataFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseDataFilter.swift; sourceTree = "<group>"; };
+		653652D3209C39FC00F94706 /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		653652D4209C39FC00F94706 /* RequestType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestType.swift; sourceTree = "<group>"; };
 		6E89E882CA10FB502BA3EE55 /* libPods-Loan.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Loan.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		94B69AE99C4F4B8639CF596D /* Pods-Loan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Loan.release.xcconfig"; path = "Pods/Target Support Files/Pods-Loan/Pods-Loan.release.xcconfig"; sourceTree = "<group>"; };
 		C90FCC599A4E148CF4ECB0D0 /* Pods-Loan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Loan.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Loan/Pods-Loan.debug.xcconfig"; sourceTree = "<group>"; };
@@ -82,9 +85,6 @@
 		E09195282099E93A0083FBF8 /* LoanUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LoanUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E091952C2099E93A0083FBF8 /* LoanUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanUITests.swift; sourceTree = "<group>"; };
 		E091952E2099E93A0083FBF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E09195752099F2F60083FBF8 /* ResponseDataFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseDataFilter.swift; sourceTree = "<group>"; };
-		E09195772099F2F60083FBF8 /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
-		E091957B2099F2F60083FBF8 /* RequestType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestType.swift; sourceTree = "<group>"; };
 		E091957E2099F2F60083FBF8 /* UserData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		E091957F2099F2F60083FBF8 /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		E09195802099F2F60083FBF8 /* UserGoalData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserGoalData.swift; sourceTree = "<group>"; };
@@ -135,6 +135,7 @@
 		653652B9209C37ED00F94706 /* Venders */ = {
 			isa = PBXGroup;
 			children = (
+				653652D0209C39FC00F94706 /* YYRequest */,
 				653652BA209C37ED00F94706 /* YYCells */,
 			);
 			path = Venders;
@@ -162,6 +163,24 @@
 				653652C0209C37ED00F94706 /* FullImageViewStyleCell.xib */,
 			);
 			path = YYCells;
+			sourceTree = "<group>";
+		};
+		653652D0209C39FC00F94706 /* YYRequest */ = {
+			isa = PBXGroup;
+			children = (
+				653652D1209C39FC00F94706 /* YYRequest */,
+			);
+			path = YYRequest;
+			sourceTree = "<group>";
+		};
+		653652D1209C39FC00F94706 /* YYRequest */ = {
+			isa = PBXGroup;
+			children = (
+				653652D2209C39FC00F94706 /* ResponseDataFilter.swift */,
+				653652D3209C39FC00F94706 /* Request.swift */,
+				653652D4209C39FC00F94706 /* RequestType.swift */,
+			);
+			path = YYRequest;
 			sourceTree = "<group>";
 		};
 		77E792BA9896D7467197BCDE /* Pods */ = {
@@ -239,20 +258,9 @@
 		E091953F2099F2F60083FBF8 /* DAL */ = {
 			isa = PBXGroup;
 			children = (
-				E091956F2099F2F60083FBF8 /* Request */,
 				E091957D2099F2F60083FBF8 /* UserData */,
 			);
 			path = DAL;
-			sourceTree = "<group>";
-		};
-		E091956F2099F2F60083FBF8 /* Request */ = {
-			isa = PBXGroup;
-			children = (
-				E09195752099F2F60083FBF8 /* ResponseDataFilter.swift */,
-				E09195772099F2F60083FBF8 /* Request.swift */,
-				E091957B2099F2F60083FBF8 /* RequestType.swift */,
-			);
-			path = Request;
 			sourceTree = "<group>";
 		};
 		E091957D2099F2F60083FBF8 /* UserData */ = {
@@ -500,20 +508,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				653652C7209C37ED00F94706 /* PasswordTextFieldStyleCell.swift in Sources */,
+				653652D7209C39FC00F94706 /* Request.swift in Sources */,
 				653652CD209C37ED00F94706 /* FullImageViewStyleCell.swift in Sources */,
 				E09196122099F4420083FBF8 /* LoginViewController.swift in Sources */,
-				E09195E42099F2F60083FBF8 /* RequestType.swift in Sources */,
 				E091950B2099E9390083FBF8 /* AppDelegate.swift in Sources */,
-				E09195DE2099F2F60083FBF8 /* ResponseDataFilter.swift in Sources */,
 				653652CC209C37ED00F94706 /* CellStyleModel.swift in Sources */,
+				653652D8209C39FC00F94706 /* RequestType.swift in Sources */,
 				E09195E72099F2F60083FBF8 /* UserModel.swift in Sources */,
 				653652C6209C37ED00F94706 /* TextFieldStyleCell.swift in Sources */,
 				653652CB209C37ED00F94706 /* ButtonStyleCell.swift in Sources */,
 				E09195ED2099F2F60083FBF8 /* UIView_ConvertToImage.swift in Sources */,
 				E09195EE2099F2F60083FBF8 /* ConvertString.swift in Sources */,
 				E091960A2099F3C40083FBF8 /* RootTabBarController.swift in Sources */,
+				653652D6209C39FC00F94706 /* ResponseDataFilter.swift in Sources */,
 				E09195E62099F2F60083FBF8 /* UserData.swift in Sources */,
-				E09195E02099F2F60083FBF8 /* Request.swift in Sources */,
 				E09195EA2099F2F60083FBF8 /* ConvertData.swift in Sources */,
 				E091960C2099F4040083FBF8 /* HomeTableViewController.swift in Sources */,
 				E091960E2099F41A0083FBF8 /* StatuSearchTableViewController.swift in Sources */,
