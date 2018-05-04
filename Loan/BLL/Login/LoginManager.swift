@@ -110,7 +110,7 @@ struct LoginManager {
         
         if let userId = userInfo["userId"] as? String {
             print("userId\(userId)")
-            UserData.sharedInstance.userId = NSString(string: userId).integerValue
+            UserData.sharedInstance.userId = userId
         }
         
         

@@ -8,6 +8,26 @@
 
 import UIKit
 
+let navigationBarColor = UIColor.white
+// UIColor(colorLiteralRed: 6/255.0, green: 178/255.0, blue: 230/255.0, alpha: 1)
+//UIColor(red: <#T##CGFloat#>, green: <#T##CGFloat#>, blue: <#T##CGFloat#>, alpha: <#T##CGFloat#>)
+let greenButtonColor = UIColor(red: 12/255.0, green: 177/255.0, blue: 156/255.0, alpha: 1)
+
+extension UITextField {
+    
+    func setDefaultStyle() {
+        self.setValue(UIColor.lightGray, forKeyPath: "_placeholderLabel.textColor")
+    }
+}
+
+extension UIButton {
+    func setDefaultStyle() {
+        self.backgroundColor = greenButtonColor
+        self.layer.cornerRadius = 5.0
+        self.layer.masksToBounds = true
+    }
+}
+
 class LoginViewController: UIViewController {
 
     @IBOutlet weak var usernameTextField: UITextField!
@@ -61,20 +81,18 @@ class LoginViewController: UIViewController {
         passwordTextField.resignFirstResponder()
         
         AppDelegate.applicationDelegate().updateHUD(HUDType.hotwheels, message: "正在登录", detailMsg: nil, progress: nil)
-        LoginManager.login(self.usernameTextField.text, password: passwordTextField.text, autoLogin: false) { [unowned self] (error: NSError?) in
-            
-            AppDelegate.applicationDelegate().hiddenHUD()
-            
-            if error == nil {
-                
-                self.cancelItemPressed()
-            }
-            else {
-                Alert.showErrorAlert("登录失败", message: error!.localizedDescription)
-            }
-        }
-        
-        
+//        LoginManager.login(self.usernameTextField.text, password: passwordTextField.text, autoLogin: false) { [unowned self] (error: NSError?) in
+//
+//            AppDelegate.applicationDelegate().hiddenHUD()
+//
+//            if error == nil {
+//
+//                self.cancelItemPressed()
+//            }
+//            else {
+//                Alert.showErrorAlert("登录失败", message: error!.localizedDescription)
+//            }
+//        }
     }
     
     @IBAction func registerButtonPressed(_ sender: Any) {
@@ -100,7 +118,7 @@ class LoginViewController: UIViewController {
         passwordTextField.isSecureTextEntry = !secureButton.isSelected
     }
     // MARK: - KeyboardNotification
-    func keyboardShow() {
+    @objc func keyboardShow() {
         if !self.usernameTextField.isFirstResponder && !self.passwordTextField.isFirstResponder {
             return
         }
@@ -112,7 +130,7 @@ class LoginViewController: UIViewController {
         })
     }
     
-    func keyboardHide() {
+    @objc func keyboardHide() {
         if !self.usernameTextField.isFirstResponder && !self.passwordTextField.isFirstResponder {
             return
         }

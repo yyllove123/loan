@@ -64,17 +64,17 @@ class RegisterViewController: UIViewController {
         queryCaptchaButton.layer.borderWidth = 1
         
 //        AppDelegate.applicationDelegate().updateHUD(HUDType.hotwheels, message: nil, detailMsg: nil, progress: 0)
-        LoginManager.getByKey { [unowned self] (value, err) in
-            
-            if err == nil {
-                if value! {
-                    self.getByKeyView.isHidden = true
-                }
-                else {
-                    self.getByKeyView.isHidden = false
-                }
-            }
-        }
+//        LoginManager.getByKey { [unowned self] (value, err) in
+//
+//            if err == nil {
+//                if value! {
+//                    self.getByKeyView.isHidden = true
+//                }
+//                else {
+//                    self.getByKeyView.isHidden = false
+//                }
+//            }
+//        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -158,18 +158,18 @@ class RegisterViewController: UIViewController {
         reQueryCaptchas = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(RegisterViewController.requeryCaptchasTimer), userInfo: nil, repeats: true)
         
         AppDelegate.applicationDelegate().updateHUD(HUDType.hotwheels, message: "获取验证码", detailMsg: nil, progress: nil)
-        LoginManager.queryCaptchas(self.phoneTextField.text, type: 1) {[unowned self] (error: NSError?) -> Void in
-            if error != nil {
-                Alert.showErrorAlert("获取验证码失败", message: error?.localizedDescription)
-                self.queryCaptchaButton.isEnabled = true
-                self.reQueryCaptchas?.invalidate()
-                self.queryCaptchaButton.setTitle("发送验证码", for: UIControlState())
-            }
-            AppDelegate.applicationDelegate().hiddenHUD()
-        }
+//        LoginManager.queryCaptchas(self.phoneTextField.text, type: 1) {[unowned self] (error: NSError?) -> Void in
+//            if error != nil {
+//                Alert.showErrorAlert("获取验证码失败", message: error?.localizedDescription)
+//                self.queryCaptchaButton.isEnabled = true
+//                self.reQueryCaptchas?.invalidate()
+//                self.queryCaptchaButton.setTitle("发送验证码", for: UIControlState())
+//            }
+//            AppDelegate.applicationDelegate().hiddenHUD()
+//        }
     }
     
-    func requeryCaptchasTimer() {
+    @objc func requeryCaptchasTimer() {
         
         let maxRequeryCount: Int8 = 60
         requeryCaptchasTimerCount += 1
@@ -197,7 +197,7 @@ class RegisterViewController: UIViewController {
         return nil
     }
     
-    func keyboardShow() {
+    @objc func keyboardShow() {
         
         guard let textField = firstResponder() else {
             return
@@ -211,7 +211,7 @@ class RegisterViewController: UIViewController {
         })
     }
     
-    func keyboardHide() {
+    @objc func keyboardHide() {
         guard let _ = firstResponder() else {
             return
         }

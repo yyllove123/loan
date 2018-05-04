@@ -41,6 +41,47 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+    fileprivate var progressHUD: MBProgressHUD?
+    fileprivate var isShowingHUD: Bool = false
+    
+    class func applicationDelegate() -> AppDelegate {
+        return UIApplication.shared.delegate as! AppDelegate
+    }
+}
 
+enum HUDType {
+    case hotwheels  // 只有一个风火轮,加文字
+    case progress   // 初始化通讯录时有进度条
+    case onlyMsg     // 只有文字
+}
+
+extension AppDelegate {
+    func updateHUD(_ type: HUDType, message: String?, detailMsg: String?, progress: Float?) {
+        switch type {
+        case .hotwheels:
+            progressHUD?.labelText = message
+            progressHUD?.detailsLabelText = detailMsg
+            progressHUD?.mode = MBProgressHUDMode.indeterminate
+        case .onlyMsg:
+            progressHUD?.labelText = message
+            progressHUD?.detailsLabelText = detailMsg
+            progressHUD?.mode = MBProgressHUDMode.text
+        case .progress:
+            progressHUD?.labelText = message
+            progressHUD?.detailsLabelText = detailMsg
+            progressHUD?.mode = MBProgressHUDMode.determinateHorizontalBar
+        }
+        
+        if !isShowingHUD {
+            UIApplication.shared.keyWindow?.addSubview(progressHUD!)
+            progressHUD?.show(true)
+            isShowingHUD = true
+        }
+    }
+    
+    func hiddenHUD() {
+        isShowingHUD = false
+        AppDelegate.applicationDelegate().progressHUD?.hide(true)
+    }
 }
 
