@@ -8,6 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		443C2151E3353DF7C45CAC3E /* libPods-Loan.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E89E882CA10FB502BA3EE55 /* libPods-Loan.a */; };
+		6511573D20A02573001251F1 /* YYAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6511572C20A02573001251F1 /* YYAlert.swift */; };
+		6511573F20A02573001251F1 /* ConvertData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6511573020A02573001251F1 /* ConvertData.swift */; };
+		6511574020A02573001251F1 /* NSDateExtend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6511573120A02573001251F1 /* NSDateExtend.swift */; };
+		6511574120A02573001251F1 /* ConvertFloat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6511573220A02573001251F1 /* ConvertFloat.swift */; };
+		6511574220A02573001251F1 /* ConvertString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6511573320A02573001251F1 /* ConvertString.swift */; };
+		6511574420A02573001251F1 /* Crypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6511573720A02573001251F1 /* Crypto.swift */; };
+		6511574920A025C5001251F1 /* UIView_ConvertToImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6511574820A025C5001251F1 /* UIView_ConvertToImage.swift */; };
+		6511574B20A025EB001251F1 /* UIViewController_HUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6511574A20A025EB001251F1 /* UIViewController_HUD.swift */; };
 		653652C6209C37ED00F94706 /* TextFieldStyleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653652BC209C37ED00F94706 /* TextFieldStyleCell.swift */; };
 		653652C7209C37ED00F94706 /* PasswordTextFieldStyleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653652BD209C37ED00F94706 /* PasswordTextFieldStyleCell.swift */; };
 		653652C8209C37ED00F94706 /* ButtonStyleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 653652BE209C37ED00F94706 /* ButtonStyleCell.xib */; };
@@ -31,16 +39,9 @@
 		653652F5209C3C5700F94706 /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653652E7209C3C5700F94706 /* LoginRequest.swift */; };
 		653652F6209C3C5700F94706 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653652E9209C3C5700F94706 /* UserData.swift */; };
 		653652F7209C3C5700F94706 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653652EA209C3C5700F94706 /* UserModel.swift */; };
-		653652FA209C3F9800F94706 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653652F9209C3F9800F94706 /* Alert.swift */; };
 		E091950B2099E9390083FBF8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E091950A2099E9390083FBF8 /* AppDelegate.swift */; };
 		E09195222099E93A0083FBF8 /* LoanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09195212099E93A0083FBF8 /* LoanTests.swift */; };
 		E091952D2099E93A0083FBF8 /* LoanUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E091952C2099E93A0083FBF8 /* LoanUITests.swift */; };
-		E09195E92099F2F60083FBF8 /* Crypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09195822099F2F60083FBF8 /* Crypto.swift */; };
-		E09195EA2099F2F60083FBF8 /* ConvertData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09195832099F2F60083FBF8 /* ConvertData.swift */; };
-		E09195EB2099F2F60083FBF8 /* NSDateExtend.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09195842099F2F60083FBF8 /* NSDateExtend.swift */; };
-		E09195EC2099F2F60083FBF8 /* ConvertFloat.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09195852099F2F60083FBF8 /* ConvertFloat.swift */; };
-		E09195ED2099F2F60083FBF8 /* UIView_ConvertToImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09195862099F2F60083FBF8 /* UIView_ConvertToImage.swift */; };
-		E09195EE2099F2F60083FBF8 /* ConvertString.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09195872099F2F60083FBF8 /* ConvertString.swift */; };
 		E09196002099F2F60083FBF8 /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09195A52099F2F60083FBF8 /* LoginManager.swift */; };
 		E09196052099F2F60083FBF8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E09195AE2099F2F60083FBF8 /* Assets.xcassets */; };
 		E09196062099F2F60083FBF8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E09195AF2099F2F60083FBF8 /* LaunchScreen.storyboard */; };
@@ -69,6 +70,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6511572C20A02573001251F1 /* YYAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYAlert.swift; sourceTree = "<group>"; };
+		6511573020A02573001251F1 /* ConvertData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConvertData.swift; sourceTree = "<group>"; };
+		6511573120A02573001251F1 /* NSDateExtend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDateExtend.swift; sourceTree = "<group>"; };
+		6511573220A02573001251F1 /* ConvertFloat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConvertFloat.swift; sourceTree = "<group>"; };
+		6511573320A02573001251F1 /* ConvertString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConvertString.swift; sourceTree = "<group>"; };
+		6511573720A02573001251F1 /* Crypto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Crypto.swift; sourceTree = "<group>"; };
+		6511574820A025C5001251F1 /* UIView_ConvertToImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView_ConvertToImage.swift; sourceTree = "<group>"; };
+		6511574A20A025EB001251F1 /* UIViewController_HUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController_HUD.swift; sourceTree = "<group>"; };
 		653652BC209C37ED00F94706 /* TextFieldStyleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldStyleCell.swift; sourceTree = "<group>"; };
 		653652BD209C37ED00F94706 /* PasswordTextFieldStyleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordTextFieldStyleCell.swift; sourceTree = "<group>"; };
 		653652BE209C37ED00F94706 /* ButtonStyleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ButtonStyleCell.xib; sourceTree = "<group>"; };
@@ -92,7 +101,6 @@
 		653652E7209C3C5700F94706 /* LoginRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
 		653652E9209C3C5700F94706 /* UserData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		653652EA209C3C5700F94706 /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
-		653652F9209C3F9800F94706 /* Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		6E89E882CA10FB502BA3EE55 /* libPods-Loan.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Loan.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		94B69AE99C4F4B8639CF596D /* Pods-Loan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Loan.release.xcconfig"; path = "Pods/Target Support Files/Pods-Loan/Pods-Loan.release.xcconfig"; sourceTree = "<group>"; };
 		C90FCC599A4E148CF4ECB0D0 /* Pods-Loan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Loan.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Loan/Pods-Loan.debug.xcconfig"; sourceTree = "<group>"; };
@@ -105,12 +113,6 @@
 		E09195282099E93A0083FBF8 /* LoanUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LoanUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E091952C2099E93A0083FBF8 /* LoanUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanUITests.swift; sourceTree = "<group>"; };
 		E091952E2099E93A0083FBF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E09195822099F2F60083FBF8 /* Crypto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Crypto.swift; sourceTree = "<group>"; };
-		E09195832099F2F60083FBF8 /* ConvertData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConvertData.swift; sourceTree = "<group>"; };
-		E09195842099F2F60083FBF8 /* NSDateExtend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDateExtend.swift; sourceTree = "<group>"; };
-		E09195852099F2F60083FBF8 /* ConvertFloat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConvertFloat.swift; sourceTree = "<group>"; };
-		E09195862099F2F60083FBF8 /* UIView_ConvertToImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView_ConvertToImage.swift; sourceTree = "<group>"; };
-		E09195872099F2F60083FBF8 /* ConvertString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConvertString.swift; sourceTree = "<group>"; };
 		E09195A52099F2F60083FBF8 /* LoginManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
 		E09195AE2099F2F60083FBF8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E09195B02099F2F60083FBF8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -148,9 +150,81 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6511572A20A02573001251F1 /* YYAlert */ = {
+			isa = PBXGroup;
+			children = (
+				6511572B20A02573001251F1 /* YYAlert */,
+			);
+			path = YYAlert;
+			sourceTree = "<group>";
+		};
+		6511572B20A02573001251F1 /* YYAlert */ = {
+			isa = PBXGroup;
+			children = (
+				6511572C20A02573001251F1 /* YYAlert.swift */,
+			);
+			path = YYAlert;
+			sourceTree = "<group>";
+		};
+		6511572E20A02573001251F1 /* YYSomethingConvert */ = {
+			isa = PBXGroup;
+			children = (
+				6511572F20A02573001251F1 /* code */,
+			);
+			path = YYSomethingConvert;
+			sourceTree = "<group>";
+		};
+		6511572F20A02573001251F1 /* code */ = {
+			isa = PBXGroup;
+			children = (
+				6511574820A025C5001251F1 /* UIView_ConvertToImage.swift */,
+				6511573020A02573001251F1 /* ConvertData.swift */,
+				6511573120A02573001251F1 /* NSDateExtend.swift */,
+				6511573220A02573001251F1 /* ConvertFloat.swift */,
+				6511573320A02573001251F1 /* ConvertString.swift */,
+			);
+			path = code;
+			sourceTree = "<group>";
+		};
+		6511573520A02573001251F1 /* YYSecurity */ = {
+			isa = PBXGroup;
+			children = (
+				6511573620A02573001251F1 /* code */,
+			);
+			path = YYSecurity;
+			sourceTree = "<group>";
+		};
+		6511573620A02573001251F1 /* code */ = {
+			isa = PBXGroup;
+			children = (
+				6511573720A02573001251F1 /* Crypto.swift */,
+			);
+			path = code;
+			sourceTree = "<group>";
+		};
+		6511573920A02573001251F1 /* YYHUD */ = {
+			isa = PBXGroup;
+			children = (
+				6511573B20A02573001251F1 /* HUD */,
+			);
+			path = YYHUD;
+			sourceTree = "<group>";
+		};
+		6511573B20A02573001251F1 /* HUD */ = {
+			isa = PBXGroup;
+			children = (
+				6511574A20A025EB001251F1 /* UIViewController_HUD.swift */,
+			);
+			path = HUD;
+			sourceTree = "<group>";
+		};
 		653652B9209C37ED00F94706 /* Venders */ = {
 			isa = PBXGroup;
 			children = (
+				6511572A20A02573001251F1 /* YYAlert */,
+				6511573920A02573001251F1 /* YYHUD */,
+				6511573520A02573001251F1 /* YYSecurity */,
+				6511572E20A02573001251F1 /* YYSomethingConvert */,
 				653652DA209C3C5700F94706 /* YYLogin */,
 				653652D0209C39FC00F94706 /* YYRequest */,
 				653652BA209C37ED00F94706 /* YYCells */,
@@ -295,7 +369,6 @@
 				653652B9209C37ED00F94706 /* Venders */,
 				E09195882099F2F60083FBF8 /* BLL */,
 				E091953F2099F2F60083FBF8 /* DAL */,
-				E09195812099F2F60083FBF8 /* Extend */,
 				E09195AB2099F2F60083FBF8 /* UI */,
 				E091950A2099E9390083FBF8 /* AppDelegate.swift */,
 				E09195182099E93A0083FBF8 /* Info.plist */,
@@ -327,20 +400,6 @@
 			children = (
 			);
 			path = DAL;
-			sourceTree = "<group>";
-		};
-		E09195812099F2F60083FBF8 /* Extend */ = {
-			isa = PBXGroup;
-			children = (
-				653652F9209C3F9800F94706 /* Alert.swift */,
-				E09195822099F2F60083FBF8 /* Crypto.swift */,
-				E09195832099F2F60083FBF8 /* ConvertData.swift */,
-				E09195842099F2F60083FBF8 /* NSDateExtend.swift */,
-				E09195852099F2F60083FBF8 /* ConvertFloat.swift */,
-				E09195862099F2F60083FBF8 /* UIView_ConvertToImage.swift */,
-				E09195872099F2F60083FBF8 /* ConvertString.swift */,
-			);
-			path = Extend;
 			sourceTree = "<group>";
 		};
 		E09195882099F2F60083FBF8 /* BLL */ = {
@@ -408,6 +467,8 @@
 				E09195032099E9390083FBF8 /* Sources */,
 				E09195042099E9390083FBF8 /* Frameworks */,
 				E09195052099E9390083FBF8 /* Resources */,
+				B3D1DC43BBF85DD665F2C380 /* [CP] Embed Pods Frameworks */,
+				9CE8BFDAC744AD206B78A6B9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -552,6 +613,36 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		9CE8BFDAC744AD206B78A6B9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Loan/Pods-Loan-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B3D1DC43BBF85DD665F2C380 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Loan/Pods-Loan-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -559,29 +650,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6511574220A02573001251F1 /* ConvertString.swift in Sources */,
+				6511573D20A02573001251F1 /* YYAlert.swift in Sources */,
 				653652F2209C3C5700F94706 /* LoginViewController.swift in Sources */,
+				6511574420A02573001251F1 /* Crypto.swift in Sources */,
 				653652ED209C3C5700F94706 /* RegisterProtocolViewController.swift in Sources */,
 				653652C7209C37ED00F94706 /* PasswordTextFieldStyleCell.swift in Sources */,
+				6511574B20A025EB001251F1 /* UIViewController_HUD.swift in Sources */,
 				653652D7209C39FC00F94706 /* Request.swift in Sources */,
 				653652CD209C37ED00F94706 /* FullImageViewStyleCell.swift in Sources */,
 				E091950B2099E9390083FBF8 /* AppDelegate.swift in Sources */,
-				653652FA209C3F9800F94706 /* Alert.swift in Sources */,
 				653652CC209C37ED00F94706 /* CellStyleModel.swift in Sources */,
 				653652D8209C39FC00F94706 /* RequestType.swift in Sources */,
 				653652C6209C37ED00F94706 /* TextFieldStyleCell.swift in Sources */,
 				653652CB209C37ED00F94706 /* ButtonStyleCell.swift in Sources */,
-				E09195ED2099F2F60083FBF8 /* UIView_ConvertToImage.swift in Sources */,
-				E09195EE2099F2F60083FBF8 /* ConvertString.swift in Sources */,
+				6511574920A025C5001251F1 /* UIView_ConvertToImage.swift in Sources */,
 				E091960A2099F3C40083FBF8 /* RootTabBarController.swift in Sources */,
+				6511574020A02573001251F1 /* NSDateExtend.swift in Sources */,
 				653652D6209C39FC00F94706 /* ResponseDataFilter.swift in Sources */,
-				E09195EA2099F2F60083FBF8 /* ConvertData.swift in Sources */,
 				653652F6209C3C5700F94706 /* UserData.swift in Sources */,
+				6511574120A02573001251F1 /* ConvertFloat.swift in Sources */,
 				E091960C2099F4040083FBF8 /* HomeTableViewController.swift in Sources */,
 				653652F7209C3C5700F94706 /* UserModel.swift in Sources */,
 				E091960E2099F41A0083FBF8 /* StatuSearchTableViewController.swift in Sources */,
-				E09195EC2099F2F60083FBF8 /* ConvertFloat.swift in Sources */,
-				E09195EB2099F2F60083FBF8 /* NSDateExtend.swift in Sources */,
-				E09195E92099F2F60083FBF8 /* Crypto.swift in Sources */,
+				6511573F20A02573001251F1 /* ConvertData.swift in Sources */,
 				653652F4209C3C5700F94706 /* RegisterViewController.swift in Sources */,
 				E09196002099F2F60083FBF8 /* LoginManager.swift in Sources */,
 				653652F5209C3C5700F94706 /* LoginRequest.swift in Sources */,

@@ -9,6 +9,8 @@
 import Foundation
 //import CommonCrypto
 
+// 需要在桥接文件中引入  #import <CommonCrypto/CommonDigest.h>
+
 /*
 /*
 * MD5

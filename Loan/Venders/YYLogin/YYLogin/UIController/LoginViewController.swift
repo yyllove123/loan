@@ -80,7 +80,7 @@ class LoginViewController: UIViewController {
         usernameTextField.resignFirstResponder()
         passwordTextField.resignFirstResponder()
         
-        AppDelegate.applicationDelegate().updateHUD(HUDType.hotwheels, message: "正在登录", detailMsg: nil, progress: nil)
+        self.updateHUD(HUDType.hotwheels, message: "正在登录", detailMsg: nil, progress: nil)
 //        LoginManager.login(self.usernameTextField.text, password: passwordTextField.text, autoLogin: false) { [unowned self] (error: NSError?) in
 //
 //            AppDelegate.applicationDelegate().hiddenHUD()

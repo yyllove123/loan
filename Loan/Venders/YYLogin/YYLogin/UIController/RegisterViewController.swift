@@ -119,17 +119,17 @@ class RegisterViewController: UIViewController {
         }
         
         
-        AppDelegate.applicationDelegate().updateHUD(HUDType.hotwheels, message: "正在注册", detailMsg: nil, progress: nil)
-        LoginManager.registerUser(phone: phoneTextField.text, captcha: captchaTextField.text, password: passwordTextField.text, inviteCode: inviteCodeTextField.text, orgazationCode: companyNumberTextField.text) { [unowned self] (error) in
-            AppDelegate.applicationDelegate().hiddenHUD()
-            if error == nil {
-                
-                self.navigationController?.popViewController(animated: true)
-            }
-            else {
-                Alert.showErrorAlert(nil, message: error!.localizedDescription)
-            }
-        }
+        self.updateHUD(HUDType.hotwheels, message: "正在注册", detailMsg: nil, progress: nil)
+//        LoginManager.registerUser(phone: phoneTextField.text, captcha: captchaTextField.text, password: passwordTextField.text, inviteCode: inviteCodeTextField.text, orgazationCode: companyNumberTextField.text) { [unowned self] (error) in
+//            AppDelegate.applicationDelegate().hiddenHUD()
+//            if error == nil {
+//                
+//                self.navigationController?.popViewController(animated: true)
+//            }
+//            else {
+//                Alert.showErrorAlert(nil, message: error!.localizedDescription)
+//            }
+//        }
     }
     
     @IBAction func passwordSecureButtonPressed(_ sender: Any) {
@@ -157,7 +157,7 @@ class RegisterViewController: UIViewController {
         requeryCaptchasTimerCount = 0
         reQueryCaptchas = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(RegisterViewController.requeryCaptchasTimer), userInfo: nil, repeats: true)
         
-        AppDelegate.applicationDelegate().updateHUD(HUDType.hotwheels, message: "获取验证码", detailMsg: nil, progress: nil)
+        self.updateHUD(HUDType.hotwheels, message: "获取验证码", detailMsg: nil, progress: nil)
 //        LoginManager.queryCaptchas(self.phoneTextField.text, type: 1) {[unowned self] (error: NSError?) -> Void in
 //            if error != nil {
 //                Alert.showErrorAlert("获取验证码失败", message: error?.localizedDescription)

@@ -1,4 +1,4 @@
-platform :ios, '7.0'
+platform :ios, '10.0'
 
 target ‘Loan’ do
 pod "SDWebImage", '~> 3.7.4'
