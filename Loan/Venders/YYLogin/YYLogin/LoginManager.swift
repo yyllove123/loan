@@ -23,31 +23,29 @@ struct LoginManager {
         }
     }
     
-    static var isShowAds: Bool {
-        get {
-            return false
+    // 通过手机号 和 验证码登录
+    static func login(_ datas: [String : Any], complete: ((NSError?) -> Void)?) {
+        
+        LoginRequest.login(datas: datas) { (userInfo: [String: AnyObject]?, error: NSError?) -> Void in
+            // deal userInfo
+            if error == nil {
+                parseUserInfo(userInfo!)
+            }
+            complete?(error)
         }
     }
     
-    // 通过手机号 和 验证码登录
-    static func login(_ phone: String?, captchas: String?, complete: ((NSError?) -> Void)?) {
+    static func registerUser(_ datas: [String : Any], complete : @escaping (([String: AnyObject]? , NSError?) -> Void)) {
         
-        if phone == nil || captchas == nil || captchas == "" || phone == ""{
-            complete?(NSError(domain: "登录", code: 0, userInfo: [NSLocalizedDescriptionKey:"手机号或验证码不能为空"]))
-            return
-        }
-        
-//        LoginRequest.login(phone!, captchas: captchas!) { (userInfo: [String: AnyObject]?, error: NSError?) -> Void in
-//            // deal userInfo
-//            if error == nil {
-//                parseUserInfo(userInfo!)
-//            }
-//            complete?(error)
-//        }
+        LoginRequest.registerUser(datas: datas, complete: complete)
+    }
+    
+    static func findForgetPwd(_ datas: [String : Any], complete: ((NSError?) -> Void)?) {
+        LoginRequest.findForgetPwd(datas: datas, complete: complete)
     }
     
     // 获取验证码
-    static func queryCaptchas(_ phone: String?, complete: ((String?, NSError?) -> Void)?) {
+    static func queryCaptchas(_ phone: String?, type: Int, complete: ((String?, NSError?) -> Void)?) {
         
         if phone == nil || phone == "" {
             complete?("", NSError(domain: "获取验证码", code: 0, userInfo: [NSLocalizedDescriptionKey:"手机号不能为空"]))
@@ -57,38 +55,6 @@ struct LoginManager {
 //        LoginRequest.queryCaptchas(phone!, complete: { (authCode: String?, error: NSError?) -> Void in
 //            complete?(authCode,error)
 //        })
-    }
-    
-    
-    
-    // 完善信息
-    static func completeInfomation(_ name: String, gender: Bool, birthday: String, height: UInt8, phone: String?, organizationCode: String?, headURL: String?, complete: @escaping ((_ error: NSError?) -> Void)) {
-        
-        if UserData.sharedInstance.userId == nil {
-            complete(NSError(domain: "\(#function)", code: 0, userInfo: [NSLocalizedDescriptionKey: "未登录请先登录"]))
-            return
-        }
-        
-//        UserRequest.completeUserInfo(Int(UserData.sharedInstance.userId!), gender: gender, height: height, birthday: birthday, name: name, phone: phone, organizationCode: organizationCode, imageURL: headURL) { (imageURLStr, error) -> Void in
-//
-//            if headURL != nil {
-//                _ = try? FileManager.default.removeItem(atPath: headURL!)
-//            }
-//
-//            if error == nil {
-//                UserData.sharedInstance.name = name
-//                UserData.sharedInstance.gender = gender
-//                UserData.sharedInstance.birthday = birthday
-//                UserData.sharedInstance.height = height
-//
-//                UserData.sharedInstance.phone = phone
-//                UserData.sharedInstance.organizationCode = organizationCode
-//
-//                UserData.sharedInstance.headURL = imageURLStr
-//            }
-//
-//            complete(error)
-//        }
     }
     
     static func uploadHeadIcon(_ imageURL: URL, complete: ((_ error: NSError?) -> Void)) {
@@ -112,7 +78,6 @@ struct LoginManager {
             print("userId\(userId)")
             UserData.sharedInstance.userId = userId
         }
-        
         
         if let phone = userInfo["phone"] as? String {
             print("mobile\(phone)")

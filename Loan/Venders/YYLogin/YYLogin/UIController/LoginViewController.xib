@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment version="2304" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="GaiJu" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="Loan" customModuleProvider="target">
             <connections>
                 <outlet property="forgetPwdButton" destination="V1w-Gh-jKR" id="4gC-JB-49f"/>
                 <outlet property="loginButton" destination="ouq-72-UPZ" id="NpX-x6-JuW"/>
@@ -203,7 +203,7 @@
                 <constraint firstAttribute="trailing" secondItem="0v6-z2-CA0" secondAttribute="trailing" id="nL7-Cs-YgY"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="Mxq-E6-uWu"/>
-            <point key="canvasLocation" x="-1145" y="306"/>
+            <point key="canvasLocation" x="-1469" y="457"/>
         </view>
     </objects>
     <resources>

@@ -81,18 +81,22 @@ class LoginViewController: UIViewController {
         passwordTextField.resignFirstResponder()
         
         self.updateHUD(HUDType.hotwheels, message: "正在登录", detailMsg: nil, progress: nil)
-//        LoginManager.login(self.usernameTextField.text, password: passwordTextField.text, autoLogin: false) { [unowned self] (error: NSError?) in
-//
-//            AppDelegate.applicationDelegate().hiddenHUD()
-//
-//            if error == nil {
-//
-//                self.cancelItemPressed()
-//            }
-//            else {
-//                Alert.showErrorAlert("登录失败", message: error!.localizedDescription)
-//            }
-//        }
+        
+        LoginManager.login([
+            "username" : usernameTextField.text ?? "",
+            "password" : passwordTextField.text ?? ""
+        ]) { [unowned self] (error: NSError?) in
+
+            self.hiddenHUD()
+
+            if error == nil {
+
+                self.cancelItemPressed()
+            }
+            else {
+                Alert.showErrorAlert("登录失败", message: error!.localizedDescription)
+            }
+        }
     }
     
     @IBAction func registerButtonPressed(_ sender: Any) {
